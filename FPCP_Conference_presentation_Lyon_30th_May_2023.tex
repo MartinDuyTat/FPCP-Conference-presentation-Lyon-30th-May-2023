@@ -1,0 +1,212 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Overleaf (WriteLaTeX) Example: Molecular Chemistry Presentation
+%
+% Source: http://www.overleaf.com
+%
+% In these slides we show how Overleaf can be used with standard 
+% chemistry packages to easily create professional presentations.
+% 
+% Feel free to distribute this example, but please keep the referral
+% to overleaf.com
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+
+\mode<presentation>
+{
+  \usetheme{Madrid}       % or try default, Darmstadt, Warsaw, ...
+  \usecolortheme{default} % or try albatross, beaver, crane, ...
+  \usefonttheme{default}    % or try default, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+} 
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+  \hypersetup{colorlinks=true}
+  \hypersetup{urlcolor=blue}
+  \hypersetup{linkcolor = .}
+\usepackage{xcolor}
+\usepackage{siunitx}
+  \sisetup{separate-uncertainty = true}
+\usepackage{physics}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{subcaption}
+\usepackage[en-GB]{datetime2}
+\usepackage{overpic}
+\usepackage{feynmp}
+\DeclareGraphicsRule{*}{mps}{*}{}
+\usepackage{scalerel}
+\newcommand{\mylbrace}[2]{\vspace{#2pt}\hspace{6pt}\scaleleftright[\dimexpr5pt+#1\dimexpr0.06pt]{\lbrace}{\rule[\dimexpr2pt-#1\dimexpr0.5pt]{-4pt}{#1pt}}{.}}
+\newcommand{\myrbrace}[2]{\vspace{#2pt}\scaleleftright[\dimexpr5pt+#1\dimexpr0.06pt]{.}{\rule[\dimexpr2pt-#1\dimexpr0.5pt]{-4pt}{#1pt}}{\rbrace}\hspace{6pt}}
+
+% Trim in percent
+\usepackage{adjustbox}
+
+% No "Figure" prefix
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+
+% Nice decay amplitude diagrams
+\usepackage{amsmath,amssymb,tikz-cd}
+
+% Strike out text
+\usepackage[normalem]{ulem}
+
+% For figures with text overlay
+\usepackage{overpic}
+
+% Here's where the presentation starts, with the info for the title slide
+\title[Charm physics]{Charm physics at BESIII}
+
+\author[Martin Tat]{Martin Tat, on behalf of the BESIII Collaboration}
+\institute[University of Oxford]{\normalsize University of Oxford\\ \vspace{0.3cm}\normalsize FPCP Conference}
+\date{30th May 2023}
+
+\titlegraphic{\includegraphics[height = 2cm]{OxfordLogo.pdf}\hspace{1cm}~%
+              \includegraphics[height = 2cm]{bes3.jpg}}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% These three lines create an automatically generated table of contents.
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+\section{Charm physics at the BESIII experiment}
+\begin{frame}{The BESIII experiment}
+  \begin{itemize}
+    \item{BEPCII is a symmetric $e^+e^-$ collider with a peak luminosity of $\SI{1e33}{\per\centi\meter\squared\per\second}$ at $\sqrt{s} = \SI{3.773}{\giga\eV}$}
+    \item{Tracking: Helium-based multilayer drift chamber (MDC)}
+    \item{PID: Plastic scintillator TOF system and $\dv{E}{x}$}
+    \item{Magnet: $\SI{1.0}{\tesla}$ superconducting solenoid}
+    \item{Neutral particle tracking: CsI(Tl) electromagnetic calorimeter (EMC)}
+  \end{itemize}
+  \begin{figure}
+    \centering
+    \begin{subfigure}{0.5\textwidth}
+      \centering
+      \includegraphics[width = 1.0\textwidth]{Figures/BEPCII.jpg}
+    \end{subfigure}%
+    \begin{subfigure}{0.5\textwidth}
+      \centering
+      \includegraphics[width = 1.0\textwidth]{Figures/BESIII.png}
+    \end{subfigure}
+    \caption*{Overview of (left) BEPCII and (right) BESIII}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Recent charm results from BESIII}
+  \vspace{0.0cm}
+  {\large Charm physics at BESIII can be roughly categories into three areas:}
+  \begin{enumerate}
+    \item{Strong-phase measurements}
+    \begin{itemize}
+      \item{Measurement of $\delta_{K\pi}$ \href{https://link.springer.com/article/10.1140/epjc/s10052-022-10872-2}{EPJC \textbf{82} 1009 (2022)}}
+    \end{itemize}
+    \item{Amplitude analysis}
+    \item{Semileptonic charm decays}
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{Double-tag analysis}
+  \begin{figure}[H]
+    \begin{fmffile}{fgraph/fgraph_flavour_decays}
+      \setlength{\unitlength}{1cm}
+      \begin{fmfgraph*}(8,4)
+        \fmfstraight
+        \fmfleft{i4,i3,i2,i1}
+        \fmfright{g1,o1,o2,g2}
+        \fmflabel{$K^-$}{o1}
+        \fmflabel{$K^+$}{o2}
+        \fmflabel{$K^-$}{i1}
+        \fmflabel{$\pi^+$}{i2}
+        \fmflabel{$\pi^-$}{i3}
+        \fmflabel{$\pi^+$}{i4}
+        \fmf{plain}{wL,i1}
+        \fmf{plain}{wL,i2}
+        \fmf{plain}{wL,i3}
+        \fmf{plain}{wL,i4}
+        \fmf{plain}{wR,o1}
+        \fmf{plain}{wR,o2}
+        \fmf{phantom}{wR,g1}
+        \fmf{phantom}{wR,g2}
+        \fmf{dashes,tension=10.0}{wR,w}
+        \fmf{dashes,tension=10.0}{wL,w}
+        \fmfv{decor.shape=circle,decor.filled=shaded,decor.size=0.4cm,label=$D^0$,label.angle=90,label.dist=0.4cm}{wR}
+        \fmfv{decor.shape=circle,decor.filled=shaded,decor.size=0.4cm,label=$\bar{D^0}$,label.angle=90,label.dist=0.4cm}{wL}
+        \fmfblob{0.5cm}{wL}
+        \fmfv{decor.shape=hexagram,decor.filled=empty,decor.size=0.3cm,label=$\psi(3770)$,label.angle=-90,label.dist=0.4cm}{w}
+      \end{fmfgraph*}
+    \end{fmffile}
+    \vspace{0.5cm}
+    \caption*{Double-tag method}
+  \end{figure}
+  \begin{center}
+    The $D$ mesons are produced in a quantum correlated state:\\
+    $\lvert\psi\rangle = \frac{1}{\sqrt{2}}\big(\lvert D^0\rangle\lvert\bar{D^0}\rangle - \lvert\bar{D^0}\rangle\lvert D^0\rangle\big)$
+  \end{center}
+\end{frame}
+
+\begin{frame}{Double-tag analysis}
+  \begin{figure}[H]
+    \begin{fmffile}{fgraph/fgraph_CP_decays}
+      \setlength{\unitlength}{1cm}
+      \begin{fmfgraph*}(8,4)
+        \fmfstraight
+        \fmfleft{i4,i3,i2,i1}
+        \fmfright{g1,o1,o2,g2}
+        \fmflabel{$K^-$}{o1}
+        \fmflabel{$K^+$}{o2}
+        \fmflabel{$K^-$}{i1}
+        \fmflabel{$\pi^+$}{i2}
+        \fmflabel{$\pi^-$}{i3}
+        \fmflabel{$\pi^+$}{i4}
+        \fmf{plain}{wL,i1}
+        \fmf{plain}{wL,i2}
+        \fmf{plain}{wL,i3}
+        \fmf{plain}{wL,i4}
+        \fmf{plain}{wR,o1}
+        \fmf{plain}{wR,o2}
+        \fmf{phantom}{wR,g1}
+        \fmf{phantom}{wR,g2}
+        \fmf{dashes,tension=10.0}{wR,w}
+        \fmf{dashes,tension=10.0}{wL,w}
+        \fmfv{decor.shape=circle,decor.filled=shaded,decor.size=0.4cm,label=$D_+$,label.angle=90,label.dist=0.4cm}{wR}
+        \fmfv{decor.shape=circle,decor.filled=shaded,decor.size=0.4cm,label=$D_-$,label.angle=90,label.dist=0.4cm}{wL}
+        \fmfblob{0.5cm}{wL}
+        \fmfv{decor.shape=hexagram,decor.filled=empty,decor.size=0.3cm,label=$\psi(3770)$,label.angle=-90,label.dist=0.4cm}{w}
+      \end{fmfgraph*}
+    \end{fmffile}
+    \vspace{0.5cm}
+    \caption*{Double-tag method}
+  \end{figure}
+  \begin{center}
+    Equivalently, we can consider the CP even (odd) eigenstates $D_+$ ($D_-$):\\
+    $\lvert\psi\rangle = \frac{1}{\sqrt{2}}\big(\lvert D_+\rangle\lvert D_-\rangle - \lvert D_-\rangle\lvert D_+\rangle\big)$
+  \end{center}
+\end{frame}
+
+\begin{frame}{Double-tag analysis}
+  \vspace{0.0cm}
+  {\large Double-tag analysis has many advantages:}
+  \begin{enumerate}
+      \setlength{\itemsep}{1.0em}
+    \item{$D\bar{D}$ pairs are quantum correlated, which provide direct access to the $D^0$-$\bar{D^0}$ strong-phase difference}
+    \item{Double-tag yields, which are experimental observables, are normalised by single-tag yields, and therefore the measurements are unaffected by systematic uncertainties from efficiencies and branching fractions}
+    \item{Full reconstruction ensures that the environment is extremely clean}
+  \end{enumerate}
+  \vspace{1.0cm}
+  {\large Only one minor drawback:}
+  \begin{enumerate}
+    \item{Lower statistics}
+  \end{enumerate}
+\end{frame}
+
+\end{document}

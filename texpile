@@ -1,0 +1,13 @@
+#!/bin/bash
+f=FPCP_Conference_presentation_Lyon_30th_May_2023
+if pdflatex $f.tex
+then
+  cd fgraph
+  MPFILES=`ls *.mp`
+  for MP in ${MPFILES}; do
+    mpost ${MP}
+  done
+  cd ..
+  pdflatex $f.tex
+fi
+rm $f.{aux,log,nav,out,snm,toc}
