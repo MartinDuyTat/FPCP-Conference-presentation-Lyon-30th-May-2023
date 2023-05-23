@@ -101,7 +101,7 @@
       \centering
       \includegraphics[width = 1.0\textwidth]{Figures/BESIII.png}
     \end{subfigure}
-    \caption*{Overview of (left) BEPCII and (right) BESIII}
+    \caption*{Overview of (left) BEPCII and (right) BESIII.}
   \end{figure}
 \end{frame}
 
@@ -208,9 +208,9 @@
   \vspace{0.0cm}
   {\large Double-tag analysis has many advantages:}
   \begin{enumerate}
-      \setlength{\itemsep}{1.0em}
+    \setlength{\itemsep}{1.0em}
     \item{$D\bar{D}$ pairs are quantum correlated, which provide direct access to the $D^0$-$\bar{D^0}$ strong-phase difference}
-    \item{Measurement are, to first order, free from systematic uncertainties due to efficiencies and branching fractions}
+    \item{Measurements are, to first order, free from systematic uncertainties due to efficiencies and branching fractions}
     \item{Full reconstruction ensures that the environment is extremely clean}
   \end{enumerate}
   \vspace{1.0cm}
@@ -234,14 +234,119 @@
   \end{itemize}
   Analysis strategy:
   \begin{itemize}
-    \item{Extensive use of $D\to K_L^0X$ tags}
+    \item{Large boost in statistics by including $D\to K_L^0X$ tags}
     \item{Independent determinations of $D\to K_L^0X$ branching fractions}
   \end{itemize}
   Significance:
   \begin{itemize}
     \item{Most precise measurement of $\delta_D^{K\pi}$ in quantum-correlated $D\bar{D}$ decays}
-    \item{Complementary to $\gamma$ and charm combination from LHCb}
   \end{itemize}
+\end{frame}
+
+\begin{frame}{$D\to K^-\pi^+$}
+  \vspace{0.0cm}
+  {\large The strong-phase difference $\delta_D^{K\pi}$ between CF and DCS $D\to K^-\pi^+$ is a key parameter in charm physics:}
+  \begin{center}
+    $r_D^{K\pi}\exp\big(-i\delta_D^{K\pi}) = \frac{\langle K^+\pi^-\lvert D^0\rangle}{\langle K^+\pi^-\lvert \bar{D^0}\rangle}$
+  \end{center}
+  \vspace{0.5cm}
+  {\large Analysis is split into three main sections:}
+  \vspace{0.2cm}
+  \begin{enumerate}
+    \setlength{\itemsep}{1.0em}
+    \item{Determination of $D\to K_L^0X$ branching fractions}
+    \item{Measurement of the asymmetry $\mathcal{A}_{K\pi}$ using $C\!P$ tags}
+    \item{Measurement of $r_D^{K\pi}\cos(\delta_D^{K\pi})$ and $r_D^{K\pi}\sin(\delta_D^{K\pi})$ with $K_{S, L}^0\pi^+\pi^-$ tags}
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{$D\to K^-\pi^+$}
+  \begin{itemize}
+    \item{Branching fractions must be determined independently of $D\to K^-\pi^+\implies$ Measure using pure $C\!P$ tags}
+    \item{$K_L^0\pi^0$ and $K_L^0\omega$ are $C\!P$-even decays, and must therefore be tagged by $C\!P$-odd decays}
+    \begin{itemize}
+      \item{$K_S^0\pi^0$, $K_S^0\eta$, $K_S^0\eta'(\pi^+\pi^-\eta, \pi^+\pi^-\gamma)$, $K_S^0\omega$}
+    \end{itemize}
+  \end{itemize}
+  \begin{figure}
+    \includegraphics[height=4.5cm,trim={0 8.5cm 0 0},clip=true]{Figures/Delta_Kpi_KLX_DT_Fits.pdf}
+    \caption*{Missing mass squared in $C\!P$-tagged (left) $D\to K_L^0\pi^0$ and (right) $D\to K_L^0\omega$.}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{$D\to K^-\pi^+$}
+  \begin{itemize}
+    \item{Branching fractions must be determined independently of $D\to K^-\pi^+\implies$ Measure using pure $C\!P$ tags}
+    \item{Similarly, $K_L^0\pi^0\pi^0$ is a $C\!P$-odd decay and is tagged by $C\!P$-even decays}
+    \begin{itemize}
+      \item{$K^+K^-$, $\pi^+\pi^-$, $K_S^0\pi^0\pi^0$, $\pi^+\pi^-\pi^0$}
+    \end{itemize}
+  \end{itemize}
+  \begin{figure}
+    \includegraphics[height=4.5cm,trim={0 0 0 8.8cm},clip=true]{Figures/Delta_Kpi_KLX_DT_Fits.pdf}
+    \caption*{Missing mass squared in (left) $\pi^+\pi^-\pi^0$ tags and all other tags (left).}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{$D\to K^-\pi^+$}
+  \vspace{0.0cm}
+  {\large Asymmetry $\mathcal{A}_{K\pi}$ of the branching fraction, tagged with $C\!P$-even and $C\!P$-odd decays, is sensitive to $\delta_D^{K\pi}$:}
+  \begin{center}
+    $\mathcal{A}_{K\pi} = \frac{-2r_D^{K\pi}\cos(\delta_{K\pi}) + y}{1 + (r_D^{K\pi})^2}$
+  \end{center}
+  Using external inputs for $y$ and $r_D^{K\pi}$, $r_D^{K\pi}\cos(\delta_D^{K\pi})$ is calculated from $\mathcal{A}_{K\pi}$
+  \begin{figure}
+    \centering
+    \begin{subfigure}{0.5\textwidth}
+      \centering
+      \includegraphics[height=4.0cm,trim={0 8.6cm 9.4cm 0},clip=true]{Figures/Delta_Kpi_DT_Fits.pdf}
+    \end{subfigure}%
+    \begin{subfigure}{0.5\textwidth}
+      \centering
+      \includegraphics[height=4.0cm]{Figures/Delta_Kpi_Asymmetry.pdf}
+    \end{subfigure}
+    \caption*{Left: Fit of the $K^-\pi^+$ vs $K_L^0\omega$ double-tag yield. Right: Branching fraction of $D\to K^-\pi^+$ measured using $C\!P$ tags.}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{$D\to K^-\pi^+$}
+  \vspace{0.0cm}
+  {\large Double-tag yields using the $K_{S, L}^0\pi^+\pi^-$ tags, in bins of phase space, are also sensitive to $\delta_D^{K\pi}$:}
+  \begin{equation*}
+    Y_i\propto\Big(K_i + (r_D^{K\pi})^2K_{-i} - 2r_D^{K\pi}\sqrt{K_iK_{-i}}\Big[c_i\cos(\delta_D^{K\pi}) - s_i\sin(\delta_D^{K\pi})\Big]\Big)
+  \end{equation*}
+  \vspace{-0.7cm}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+      \setlength{\itemsep}{1.0em}
+      \item{$\delta_D^{K\pi}$ is close to $\pi\implies$ $\sin(\delta_D^{K\pi})$ is much more sensitive to $\delta_D^{K\pi}$}
+      \item{Unique determination of $\delta_D^{K\pi}$ without ambiguity}
+      \item{External inputs for $K_i$, $c_i$ and $s_i$ are recalculated without inputs from $D\to K^-\pi^+$}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}
+        \includegraphics[width=0.75\textwidth,trim={0 5.8cm 0 0},clip=true]{Figures/KSpipiVersusKpiYields.pdf}
+        \includegraphics[width=0.75\textwidth,trim={0 0 0 2.0cm},clip=true]{Figures/KLpipiVersusKpiYields.pdf}
+        \caption*{Bin yields of $D\to K_{S, L}^0\pi^+\pi^-$}
+      \end{figure}
+    \end{column}
+  \end{columns}  
+\end{frame}
+
+\begin{frame}{$D\to K^-\pi^+$}
+  \vspace{0.0cm}
+  {\large Putting this all together:}
+  \begin{align*}
+    \delta_D^{K\pi} = (187.6^{+8.9+5.4}_{-9.7-6.4})^\circ \\
+  \end{align*}
+  {\large Furthermore, the following braching fractions will be valuable additions to the PDG:}
+  \begin{align*}
+    \mathcal{B}(D^0\to K_L^0\pi^0) =& (0.97 \pm 0.03 \pm 0.02)\times10^{-2} \\
+    \mathcal{B}(D^0\to K_L^0\omega) =& (1.09 \pm 0.06 \pm 0.03)\times10^{-2} \\
+    \mathcal{B}(D^0\to K_L^0\pi^0\pi^0) =& (1.26 \pm 0.05 \pm 0.03)\times10^{-2}
+  \end{align*}
 \end{frame}
 
 \section{\texorpdfstring{$D\to K^-\pi^+\pi^-\pi^+$}{D2Kpipipi}}
@@ -267,6 +372,83 @@
   \end{itemize}
 \end{frame}
 
+\begin{frame}{$D\to K^-\pi^+\pi^-\pi^+$}
+  \vspace{0.0cm}
+  {\large The average strong-phase difference of multi-body decays may be determined analogously using $C\!P$ and multi-body tags}
+  \begin{figure}
+    \centering
+    \begin{subfigure}{0.4\textwidth}
+      \centering
+      \includegraphics[height=5.0cm]{Figures/K3pi_CP_Asymmetry.pdf}
+    \end{subfigure}%
+    \begin{subfigure}{0.6\textwidth}
+      \centering
+      \includegraphics[height=5.0cm]{Figures/K3pi_KSpipi_yields.pdf}
+    \end{subfigure}
+    \caption*{Left: Asymmetry of $D\to K^-\pi^+\pi^-\pi^+$ branching fraction with $C\!P$-even and $C\!P$-odd tags. Right: Double-tag yields of $K_S^0\pi^+\pi^-$ vs $K^-\pi^+\pi^-\pi^+$.}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{$D\to K^-\pi^+\pi^-\pi^+$}
+  \vspace{0.0cm}
+  {\large However, averaging over phase space dilutes interference effects, which is parameterised in terms of the coherence factor:}
+  \begin{equation*}
+    R_{K3\pi}\exp(i\delta_{K3\pi})\equiv\frac{\int\dd{\vec{x}}\mathcal{A}_{\bar{D^0}\to K^+\pi^-\pi^+\pi^-}(\vec{x})\mathcal{A}^*_{D^0\to K^+\pi^-\pi^+\pi^-}(\vec{x})}{A_{\bar{D^0}\to K^+\pi^-\pi^+\pi^-}A_{D^0\to K^+\pi^-\pi^+\pi^-}}
+  \end{equation*}
+  \begin{figure}
+    \includegraphics[height=4.5cm,trim={1.5cm 11.7cm 0 0},clip=true]{Figures/K3pi_Self_Tag.pdf}
+    \caption*{Like-sign yields are proportional to $(1 - R^2)$ and brings sensitivity to $R_{K3\pi}$.}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{$D\to K^-\pi^+\pi^-\pi^+$}
+  \vspace{0.0cm}
+  {\large Fit $R_{K3\pi}$ and $\delta_{K3\pi}$: Huge improvements from CLEO-c analysis}
+  \vspace{-0.2cm}
+  \begin{figure}
+    \includegraphics[width=0.5\textwidth]{Figures/K3pi_Global_Fit.pdf}
+  \end{figure}
+  \vspace{-0.5cm}
+  {\large But: $R_{K3\pi} = 0.52^{+0.12}_{-0.10}$, so interference effects are very diluted}
+\end{frame}
+
+\begin{frame}{$D\to K^-\pi^+\pi^-\pi^+$}
+  \vspace{0.0cm}
+  \begin{center}
+    {\large Can improve coherence factors by defining a binning scheme in terms of the normalised phase difference $\delta_{K3\pi}(\vec{x}) = \arg\big(\mathcal{A}_{\bar{D^0}}(\vec{x})\mathcal{A}^*_{D^0}(\vec{x})\big) - \arg\Big(\int\dd{\vec{x}'}\mathcal{A}_{\bar{D^0}}(\vec{x}')\mathcal{A}^*_{D^0}(\vec{x}')\Big)$}
+  \end{center}
+  \vspace{-0.2cm}
+  \begin{figure}
+    \includegraphics[width=0.45\textwidth]{Figures/K3pi_Binning_Scheme.pdf}
+  \end{figure}
+  \vspace{-0.5cm}
+\end{frame}
+
+\begin{frame}{$D\to K^-\pi^+\pi^-\pi^+$}
+  \vspace{0.0cm}
+  {\large And indeed, the coherence factor is greatly improved in bin $2$ and $3$!}
+  \begin{figure}
+    \centering
+    \begin{subfigure}{0.5\textwidth}
+      \centering
+      \includegraphics[height=3.0cm,width=3.5cm]{Figures/K3pi_Binned_Fit_Bin1.pdf}
+    \end{subfigure}%
+    \begin{subfigure}{0.5\textwidth}
+      \centering
+      \includegraphics[height=3.0cm,width=3.5cm]{Figures/K3pi_Binned_Fit_Bin2.pdf}
+    \end{subfigure}
+    \begin{subfigure}{0.5\textwidth}
+      \centering
+      \includegraphics[height=3.0cm,width=3.5cm]{Figures/K3pi_Binned_Fit_Bin3.pdf}
+    \end{subfigure}%
+    \begin{subfigure}{0.5\textwidth}
+      \centering
+      \includegraphics[height=3.0cm,width=3.5cm]{Figures/K3pi_Binned_Fit_Bin4.pdf}
+    \end{subfigure}
+    \caption*{Binned fit of $\delta_{K3\pi}$ and $R_{K3\pi}$.}
+  \end{figure}
+\end{frame}
+
 \section{\texorpdfstring{$D\to K^+K^-\pi^+\pi^-$}{D2KKpipi}}
 \begin{frame}{$D\to K^+K^-\pi^+\pi^-$}
 \begin{tcolorbox}[enhanced,frame style image=blueshade_cropped.png,
@@ -287,8 +469,112 @@
   Significance:
   \begin{itemize}
     \item{First model-independent study of the $C\!P$ content of this decay}
-    \item{Will complement the existing charm decay modes, both binned and phase-space integrated, that are used for $\gamma$ and $D^0$-$\bar{D^0}$ mixing studies}
   \end{itemize}
+\end{frame}
+
+\begin{frame}{$D\to K^+K^-\pi^+\pi^-$}
+  \vspace{0.0cm}
+  {\large This decay suffers from both low branching fraction and low efficiency, as seen in the double-tag fits}
+  \begin{figure}
+    \centering
+    \begin{subfigure}{0.5\textwidth}
+      \centering
+      \includegraphics[height=4.0cm,trim={0 14.0cm 0 0},clip=true]{Figures/DoubleTagYield_DoubleTag_CP_KKpipi_vs_KK_SignalBin0.png}
+    \end{subfigure}%
+    \begin{subfigure}{0.5\textwidth}
+      \centering
+      \includegraphics[height=4.0cm,trim={0 14.0cm 0 0},clip=true]{Figures/DoubleTagYield_DoubleTag_CP_KKpipi_vs_KSpi0_SignalBin0.png}
+    \end{subfigure}
+    \caption*{Double-tag fits of $K^+K^-\pi^+\pi^-$ vs (left) $K^+K^-$ and (right) $K_S^0\pi^0$.}
+  \end{figure}
+  {\large Clear quantum correlation: The yield of $K^+K^-\pi^+\pi^-$ vs $K^+K^-$ ($C\!P$-even) is suppressed, while that of $K_S^0\pi^0$ ($C\!P$-odd) is enhanced}
+\end{frame}
+
+\begin{frame}{$D\to K^+K^-\pi^+\pi^-$}
+  \vspace{0.0cm}
+  {\large The strong-phase information is parameterised in terms of the $C\!P$-even fraction $F_+$:}
+  \vspace{-0.5cm}
+  \begin{equation*}
+    \frac{N^{\rm DT}}{N^{\rm ST}}\propto 1 \mp (2F_+ - 1)
+  \end{equation*}
+  \vspace{-0.5cm}
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.55\textwidth]{Figures/CPeven_fraction_combination_CPtags.png}
+    \caption*{Branching fractions of $D\to K^+K^-\pi^+\pi^-$ measured against $C\!P$-even/odd tags.}
+  \end{figure}
+  \vspace{-0.4cm}
+  \begin{center}
+    {\large Clearly, $D^0\to K^+K^-\pi^+\pi^-$ is predominantly \underline{$C\!P$-even}}
+  \end{center}
+\end{frame}
+
+\begin{frame}{$D\to K^+K^-\pi^+\pi^-$}
+  \begin{itemize}
+    \item{To mitigate the low reconstruction efficiency, explore a novel partially reconstructed technique}
+    \item{Poor low momentum kaon tracking efficiency $\implies$ \\Only reconstruct one kaon}
+  \end{itemize}
+  \begin{figure}
+    \centering
+    \begin{subfigure}{0.5\textwidth}
+      \centering
+      \includegraphics[height=4.0cm,trim={0 14.0cm 0 0},clip=true]{Figures/DoubleTagYield_DoubleTag_SCMB_KKpipi_vs_KSpipi_SignalBin0_TagBin1.png}
+    \end{subfigure}%
+    \begin{subfigure}{0.5\textwidth}
+      \centering
+      \includegraphics[height=4.0cm,trim={0 14.0cm 0 0},clip=true]{Figures/DoubleTagYield_DoubleTag_SCMB_KKpipi_vs_KSpipiPartReco_SignalBin0_TagBin1.png}
+    \end{subfigure}
+    \caption*{Fits of (left) fully and (right) partially reconstructed $K^+K^-\pi^+\pi^-$ vs $K_S^0\pi^+\pi^-$.}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{$D\to K^+K^-\pi^+\pi^-$}
+  \vspace{0.0cm}
+  {\large The multi-body tags $K_{S, L}^0\pi^+\pi^-$, which are split into phase-space bins, provide sensitivity to $F_+$}
+  \begin{figure}
+    \centering
+    \begin{subfigure}{0.5\textwidth}
+      \centering
+      \includegraphics[height=4.0cm]{Figures/CPeven_fraction_combination_KSpipi.png}
+    \end{subfigure}%
+    \begin{subfigure}{0.5\textwidth}
+      \centering
+      \includegraphics[height=4.0cm]{Figures/CPeven_fraction_combination_KLpipi.png}
+    \end{subfigure}
+    \caption*{Bin yields of $K^+K^-\pi^+\pi^-$ vs $K_{S, L}^0\pi^+\pi^-$.}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{$D\to K^+K^-\pi^+\pi^-$}
+  \vspace{0.0cm}
+  {\large Combining the $C\!P$ and $K_{S, L}^0\pi^+\pi^-$ tags:}
+  \begin{align*}
+    F_+ = 0.730 \pm 0.037 \pm 0.021 \\
+  \end{align*}
+  {\large This is not the end of the story:}
+  \begin{enumerate}
+    \setlength{\itemsep}{1.0em}
+    \item{A phase-space binned analysis is ongoing}
+    \item{The statistical precision will improve greatly with more data}
+    \item{This fully charged mode will provide valuable inputs to $\gamma$ and charm mixing at LHCb and Belle II}
+  \end{enumerate}
+\end{frame}
+
+\section{Summary and conclusion}
+\begin{frame}{Summary and conclusion}
+  \begin{enumerate}
+    \setlength{\itemsep}{1.0em}
+    \item{Many exciting measurements using quantum-correlated $D\bar{D}$ pairs have been performed, using the $\SI{3}{\per\femto\barn}$ dataset}
+    \item{Previous analyses, such as $\delta_{K\pi}$, have been improved using more tags and more precise inputs}
+    \item{BESIII is now exploring four-body decays, and many binned analyses are in the pipeline}
+    \item{BESIII is expected to collect $\SI{20}{\per\femto\barn}$ of $\psi(3770)$ data by 2024}
+    \begin{itemize}
+      \item{Strong-phase measurements, which are currently statistics limited, will improve significantly in the next few years}
+    \end{itemize}
+  \end{enumerate}
+  \begin{center}
+    \huge Thanks for listening!
+  \end{center}
 \end{frame}
 
 \end{document}
