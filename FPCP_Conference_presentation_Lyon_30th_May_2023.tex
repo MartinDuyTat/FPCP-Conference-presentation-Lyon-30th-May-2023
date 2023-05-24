@@ -61,6 +61,9 @@
 % Coloured text box
 \usepackage[most]{tcolorbox}
 
+% More bullet styles
+\usepackage{pifont}
+
 % Here's where the presentation starts, with the info for the title slide
 \title[Charm physics]{Charm physics at BESIII}
 
@@ -105,6 +108,58 @@
   \end{figure}
 \end{frame}
 
+\begin{frame}{The BESIII experiment}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \vspace{0.0cm}
+      {\large Key datasets for charm physics:}
+      \begin{itemize}
+      \item{2010-2011: $\SI{2.9}{\per\femto\barn}$ at $\psi(3770)$}
+      \item{2016-2017: $\SI{7.3}{\per\femto\barn}$ of $D_s\bar{D_s^*}$}
+      \item{2020: $\SI{4.5}{\per\femto\barn}$ of $\Lambda_c^+\bar{\Lambda_c^-}$}
+      \item{2021-2022: $\SI{5.0}{\per\femto\barn}$ at $\psi(3770)$}
+      \item{2022-: $\sim\SI{12}{\per\femto\barn}$ at $\psi(3770)$}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \vspace{0.5cm}
+      \begin{figure}
+        \includegraphics[width=1.0\textwidth]{Figures/BEPCII_Luminosity.png}
+        \caption*{BEPCII peak luminosity.}
+      \end{figure}
+    \end{column}
+  \end{columns}
+  \begin{block}{}<all:0>
+    Charm threshold data at $\psi(3770)\to D\bar{D}$ provide a unique access to strong-phase information that is essential for charm mixing and $\gamma$ measurements at $B$ factories
+  \end{block}
+\end{frame}
+
+\begin{frame}{The BESIII experiment}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \vspace{0.0cm}
+      {\large Key datasets for charm physics:}
+      \begin{itemize}
+      \item[\ding{217}]{2010-2011: $\SI{2.9}{\per\femto\barn}$ at $\psi(3770)$}
+      \item{2016-2017: $\SI{7.3}{\per\femto\barn}$ of $D_s\bar{D_s^*}$}
+      \item{2020: $\SI{4.5}{\per\femto\barn}$ of $\Lambda_c^+\bar{\Lambda_c^-}$}
+      \item[\ding{217}]{2021-2022: $\SI{5.0}{\per\femto\barn}$ at $\psi(3770)$}
+      \item[\ding{217}]{2022-: $\sim\SI{12}{\per\femto\barn}$ at $\psi(3770)$}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \vspace{0.5cm}
+      \begin{figure}
+        \includegraphics[width=1.0\textwidth]{Figures/BEPCII_Luminosity.png}
+        \caption*{BEPCII peak luminosity.}
+      \end{figure}
+    \end{column}
+  \end{columns}
+  \begin{block}{}
+    Charm threshold data at $\psi(3770)\to D\bar{D}$ provide a unique access to strong-phase information that is essential for charm mixing and $\gamma$ measurements at $B$ factories
+  \end{block}
+\end{frame}
+
 \begin{frame}{Recent charm results from BESIII}
   \vspace{0.0cm}
   {\large BESIII has a rich programme of charm physics:}
@@ -122,7 +177,36 @@
   \end{enumerate}
   \begin{center}
     {\Large No time to cover all topics in this talk!\\
-      I will mainly focus on strong-phase measurements in charm decays}
+      I will mainly focus on strong-phase measurements in charm decays...}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Recent charm results from BESIII}
+  \begin{enumerate}
+    \item{Strong-phase measurements}
+    \begin{itemize}
+      \item{$D\to K_S^0\pi^+\pi^-\pi^0$ $F_+$ measurement \href{https://arxiv.org/abs/2305.03975}{arXiv:2305.03975}}
+    \end{itemize}
+    \item{Amplitude analysis}
+    \begin{itemize}
+      \item{Amplitude analysis of $D^0\to K_L^0\pi^+\pi^-$ \href{https://arxiv.org/abs/2212.09048}{arXiv:2212.0904}}
+    \end{itemize}
+    \item{Semileptonic charm decays}
+    \begin{itemize}
+      \item{First study of $D_s^{*+}\to e^+\nu_e$ \href{https://arxiv.org/abs/2304.12159}{arXiv:2304.12159}}
+      \item{Update of $D_s^+\to\tau^+\nu_\tau$ with BDT \href{https://arxiv.org/abs/2303.12600}{arXiv:2303.12600}}
+    \end{itemize}
+    \item{Searches for rare decays}
+    \begin{itemize}
+      \item{$\Lambda_c^+\to\Lambda\pi^+\pi^-e^+\nu_e$, $pK_S^0\pi^-e^+\nu_e$ \href{https://arxiv.org/abs/2302.07529}{arXiv:2302.07529}}
+    \end{itemize}
+    \item{Branching fraction measurements}
+    \begin{itemize}
+      \item{$D\to K_S^0X$ branching fractions \href{https://arxiv.org/abs/2302.14488}{arXiv:2302.14488}}
+    \end{itemize}
+  \end{enumerate}
+  \begin{center}
+    {\Large ... but here I provide references to some recent interesting charm results}
   \end{center}
 \end{frame}
 
@@ -566,10 +650,11 @@
     \setlength{\itemsep}{1.0em}
     \item{Many exciting measurements using quantum-correlated $D\bar{D}$ pairs have been performed, using the $\SI{3}{\per\femto\barn}$ dataset}
     \item{Previous analyses, such as $\delta_{K\pi}$, have been improved using more tags and more precise inputs}
-    \item{BESIII is now exploring four-body decays, and many binned analyses are in the pipeline}
+    \item{BESIII is now exploring four-body decays, and many binned analyses are in the pipeline using the larger $\SI{8}{\per\femto\barn}$ dataset}
     \item{BESIII is expected to collect $\SI{20}{\per\femto\barn}$ of $\psi(3770)$ data by 2024}
     \begin{itemize}
       \item{Strong-phase measurements, which are currently statistics limited, will improve significantly in the next few years}
+      \item{This unique dataset will be essential for providing inputs to the foreseen datasets at LHCb and Belle II}
     \end{itemize}
   \end{enumerate}
   \begin{center}
